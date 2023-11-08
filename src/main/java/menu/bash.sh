@@ -18,32 +18,32 @@ replace_word() {
 }
 
 
-#show_menu() {
-#    clear
-#    echo "Select an option:"
-#    echo "1. Create text files and append 'Hello world'"
-#    echo "2. Replace the word 'world' with 'bash'"
-#    echo "3. Exit"
-#
-#    read -p "Please enter the option number: " choice
-#    case $choice in
-#        1)
-#            create_files
-#            ;;
-#        2)
-#            replace_word
-#            ;;
-#        3)
-#            echo "Exiting..."
-#            exit
-#            ;;
-#        *)
-#            echo "Invalid choice."
-#            ;;
-#    esac
-#
-#    read -p "Press Enter to continue."
-#    show_menu
-#}
-#
-#show_menu
+show_menu() {
+    clear
+    echo "Select an option:"
+    echo "1. Create text files and append 'Hello world'"
+    echo "2. Replace the word 'world' with 'bash'"
+    echo "3. Exit"
+
+    read -p "Please enter the option number: " choice
+    case $choice in
+        1)
+            create_files
+            ;;
+        2)
+            replace_word
+            ;;
+        3)
+            echo "Exiting..."
+            exit
+            ;;
+        *)
+            echo "Invalid choice."
+            ;;
+    esac
+
+    read -p "Press Enter to continue."
+    show_menu
+}
+
+show_menu
